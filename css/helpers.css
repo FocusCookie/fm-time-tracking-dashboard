@@ -1,0 +1,27 @@
+.btn--text {
+  background: none;
+  border-radius: var(--radius);
+  border: 1px solid transparent;
+  color: var(--color-blue--desaturated);
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  transition: all 250ms ease;
+}
+.btn--text:hover {
+  background: var(--color-blue);
+  color: var(--color-blue-pale);
+}
+.btn-active {
+  color: var(--color-white);
+}
+
+.text--title {
+  color: var(--color-white);
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+.text--legend {
+  color: var(--color-blue--pale);
+  font-size: 0.9375rem;
+  font-weight: 300;
+}
