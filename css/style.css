@@ -1,0 +1,90 @@
+:root {
+  --color-white: #fff;
+
+  --color-work: hsl(15, 100%, 70%);
+  --color-play: hsl(195, 74%, 62%);
+  --color-study: hsl(348, 100%, 68%);
+  --color-exercise: hsl(145, 58%, 55%);
+  --color-social: hsl(264, 64%, 52%);
+  --color-selfcare: hsl(43, 84%, 65%);
+
+  --color-blue--verydark: hsl(226, 43%, 10%);
+  --color-blue--dark: hsl(235, 46%, 20%);
+  --color-blue: hsl(246, 80%, 60%);
+  --color-blue--desaturated: hsl(235, 45%, 61%);
+  --color-blue--pale: hsl(236, 100%, 87%);
+
+  --radius: 0.9375rem;
+
+  --avatar-diameter: 4.375rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Rubik, serif;
+  color: var(--color-white);
+}
+
+body {
+  height: 100vh;
+  background: var(--color-blue--verydark);
+  padding: 5.0625rem 1.5rem;
+}
+
+.attribution {
+  margin-top: 3em;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: var(--color-blue--desaturated);
+}
+
+.user {
+  display: grid;
+  grid-template-rows: auto auto;
+}
+.user-info {
+  background: var(--color-blue);
+  border-radius: var(--radius);
+  display: flex;
+  padding: 2.125rem 2rem;
+  gap: 1em;
+  align-items: center;
+  grid-row: 1/2;
+  grid-column: 1 / 2;
+  z-index: 10;
+}
+
+.user-info-avatar {
+  height: var(--avatar-diameter);
+  width: var(--avatar-diameter);
+}
+.user-timeframes {
+  background: var(--color-blue--dark);
+  border-radius: var(--radius);
+  display: flex;
+  justify-content: space-evenly;
+  grid-row: 1/3;
+  grid-column: 1 / 2;
+  padding-bottom: 1.5rem;
+  padding-top: calc(8.3125rem + 1.5rem);
+}
+
+.btn--text {
+  background: none;
+  color: var(--color-blue--desaturated);
+}
+
+.text--title {
+  color: var(--color-white);
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+.text--legend {
+  color: var(--color-blue--pale);
+  font-size: 0.9375rem;
+  font-weight: 300;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Rubik:300,400,500"
+    />
+    <title>Frontend Mentor | Time tracking dashboard</title>
+  </head>
+  <body>
+    <script type="module" src="components/user.component.js"></script>
+
+    <header>
+      <custom-user active="weekly"></custom-user>
+    </header>
+
+    <main>
+      <div class="card">
+        <div class="card-accent"></div>
+        <div class="card-content">
+          <p class="stats-title">Work</p>
+          <button class="card-more-btn">...</button>
+          <p class="stats-value-current">10hrs</p>
+          <p class="stats-value-last">last week - 36 hrs</p>
+        </div>
+      </div>
+    </main>
+
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
