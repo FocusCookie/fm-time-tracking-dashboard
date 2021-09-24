@@ -47,6 +47,7 @@ class UserComponent extends HTMLElement {
       background: var(--color-blue);
       border-radius: var(--radius);
       display: flex;
+      flex-direction: row;
       padding: 2.125rem 2rem;
       gap: 1em;
       align-items: center;
@@ -96,6 +97,31 @@ class UserComponent extends HTMLElement {
 
     .active {
       color: var(--color-white);
+    }
+
+    @media only screen and (min-width: 600px) {
+      .user {
+        max-width:16rem;
+      }
+      .user-info {    
+        flex-direction: column;
+        align-items:start;
+        gap:2.625rem;
+        padding-bottom:5rem;
+      }
+      .user-timeframes {
+        flex-direction: column;
+        padding:23.625rem 1.5rem 1.5rem 1.5rem;
+        gap:1.5rem;
+      }
+      
+      .text--title {
+        font-size: 2.5rem;
+      }
+      .user-info-avatar {
+        height: 5.125rem;
+        width:  5.125rem;
+      }
     }
     `;
 

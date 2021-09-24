@@ -88,3 +88,9 @@ body {
   font-size: 0.9375rem;
   font-weight: 300;
 }
+
+@media only screen and (min-width: 600px) {
+  header {
+    width: 20%;
+  }
+}
