@@ -37,6 +37,8 @@ function define(html) {
     set timeframes(timeframes) {
       this._timeframes = timeframes;
 
+      //TODO: refactor this . function which takes and element by id and updates innerHtml
+
       const current = this.shadowRoot.getElementById("current");
       const last = this.shadowRoot.getElementById("last");
 
