@@ -9,3 +9,5 @@ user.addEventListener("button", (e) => {
 setTimeout(() => {
   work.timeframes = { current: 5, previous: 7 };
 }, 3000);
+
+//TODO: Handling the clicks on the user type and switch data in the custom avtivity cards
