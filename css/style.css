@@ -24,8 +24,9 @@ body {
   color: var(--color-blue--desaturated);
 }
 
+main {
+  padding-top: 2rem;
+}
+
 @media only screen and (min-width: 600px) {
-  header {
-    width: 20%;
-  }
 }

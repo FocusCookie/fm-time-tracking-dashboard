@@ -6,6 +6,7 @@
   cursor: pointer;
   padding: 0.5rem 1rem;
   transition: all 250ms ease;
+  font-size: 1.125rem;
 }
 .btn--text:hover {
   background: var(--color-blue);
@@ -23,5 +24,5 @@
 .text--legend {
   color: var(--color-blue--pale);
   font-size: 0.9375rem;
-  font-weight: 300;
+  font-weight: 400;
 }

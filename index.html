@@ -20,21 +20,57 @@
   </head>
   <body>
     <script type="module" src="components/user/user.component.js"></script>
+    <script
+      type="module"
+      src="components/activity/activity.component.js"
+    ></script>
 
     <header>
       <custom-user active="daily"></custom-user>
     </header>
 
     <main>
-      <div class="card">
-        <div class="card-accent"></div>
-        <div class="card-content">
-          <p class="stats-title">Work</p>
-          <button class="card-more-btn">...</button>
-          <p class="stats-value-current">10hrs</p>
-          <p class="stats-value-last">last week - 36 hrs</p>
-        </div>
-      </div>
+      <custom-activity
+        id="work"
+        title="Work"
+        background="work"
+        icon="/images/icon-work.svg"
+      ></custom-activity>
+
+      <custom-activity
+        id="play"
+        title="Play"
+        background="play"
+        icon="/images/icon-play.svg"
+      ></custom-activity>
+
+      <custom-activity
+        id="study"
+        title="Study"
+        background="study"
+        icon="/images/icon-study.svg"
+      ></custom-activity>
+
+      <custom-activity
+        id="exercise"
+        title="Exercise"
+        background="exercise"
+        icon="/images/icon-exercise.svg"
+      ></custom-activity>
+
+      <custom-activity
+        id="social"
+        title="Social"
+        background="social"
+        icon="/images/icon-social.svg"
+      ></custom-activity>
+
+      <custom-activity
+        id="selfcare"
+        title="Selfcare"
+        background="selfcare"
+        icon="/images/icon-self-care.svg"
+      ></custom-activity>
     </main>
 
     <footer class="attribution">

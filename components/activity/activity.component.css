@@ -1,0 +1,96 @@
+@import "/css/root.css";
+@import "/css/helpers.css";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Rubik, serif;
+  color: var(--color-white);
+}
+
+.card {
+  padding-top: 2.375rem;
+  background-color: var(--color-work);
+  background-image: url("../../images/icon-work.svg");
+  background-repeat: no-repeat;
+  background-position: top -0.7rem right 1rem;
+  border-radius: var(--radius);
+}
+.card-content {
+  background: var(--color-blue--dark);
+  transform: translateY(1px);
+  border-radius: var(--radius);
+  padding: 1.75rem 1.5rem;
+  display: grid;
+  grid-template:
+    "title submenue"
+    "current last";
+  align-items: flex-end;
+}
+
+#title {
+  grid-area: title;
+}
+#submenue {
+  grid-area: submenue;
+  justify-self: flex-end;
+  align-self: center;
+  background-image: url("../../images/icon-ellipsis.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+#current {
+  grid-area: current;
+}
+#last {
+  grid-area: last;
+  justify-self: flex-end;
+  padding-bottom: 0.25rem;
+}
+
+.text--activity-title {
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+.text--activity-current {
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+@media only screen and (min-width: 600px) {
+  .card {
+    max-width: 16rem;
+  }
+  .card-content {
+    grid-auto-columns: 50%;
+    grid-template:
+      "title submenue"
+      "current current"
+      "last last";
+    justify-content: flex-start;
+  }
+  #current {
+    margin-top: 1.5rem;
+  }
+  #submenue {
+    justify-self: flex-end;
+  }
+  #last {
+    margin-top: 0.5rem;
+    justify-self: flex-start;
+  }
+
+  .text--activity-title {
+    font-size: 1.125rem;
+    font-weight: 500;
+  }
+  .text--activity-current {
+    font-size: 3.5rem;
+    font-weight: 300;
+  }
+}
