@@ -2,12 +2,48 @@ fetch("/components/activity/activity.component.html")
   .then((stream) => stream.text())
   .then((text) => define(text));
 
+function updateElemIdInnerHtml(dom, id, value) {
+  const element = dom.shadowRoot.getElementById(`${id}`);
+  element.innerHTML = value;
+}
+
+function updateTimeFrames(dom) {
+  const selected = dom.selected;
+  const timeframes = dom.timeframes;
+  const lastText = {
+    daily: "Last Day - ",
+    weekly: "Last Week - ",
+    monthly: "Last Month - ",
+  };
+
+  updateElemIdInnerHtml(dom, "current", `${timeframes[selected].current}hrs`);
+  updateElemIdInnerHtml(
+    dom,
+    "last",
+    `${lastText[selected]}${timeframes[selected].previous}hrs`
+  );
+}
+
 function define(html) {
   class ActivityComponent extends HTMLElement {
     constructor() {
       super();
 
-      this._timeframes;
+      this._timeframes = {
+        daily: {
+          current: 0,
+          previous: 0,
+        },
+        weekly: {
+          current: 0,
+          previous: 0,
+        },
+        monthly: {
+          current: 0,
+          previous: 0,
+        },
+      };
+      this._selected = "daily";
 
       this.attachShadow({ mode: "open" });
       this.shadowRoot.innerHTML = html;
@@ -34,19 +70,26 @@ function define(html) {
       titleElement.innerHTML = title;
     }
 
+    set selected(type) {
+      this._selected = type;
+      const shadowRoot = this.shadowRoot;
+      updateTimeFrames(this);
+    }
+    get selected() {
+      return this._selected;
+    }
+
     set timeframes(timeframes) {
+      console.log("SET");
       this._timeframes = timeframes;
-
-      //TODO: refactor this . function which takes and element by id and updates innerHtml
-
-      const current = this.shadowRoot.getElementById("current");
-      const last = this.shadowRoot.getElementById("last");
-
-      current.innerHTML = `${timeframes.current}hrs`;
-      last.innerHTML = `Last Week - ${timeframes.previous}hrs`;
+      updateTimeFrames(this);
     }
     get timeframes() {
       return this._timeframes;
+    }
+
+    connectedCallback() {
+      updateTimeFrames(this);
     }
   }
 
