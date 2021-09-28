@@ -10,9 +10,13 @@
 }
 
 body {
-  height: 100vh;
+  min-height: 100vh;
   background: var(--color-blue--verydark);
   padding: 5.0625rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .attribution {
@@ -31,11 +35,17 @@ main {
   gap: 1.5rem;
 }
 
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
 @media only screen and (min-width: 600px) {
   .wrapper {
     display: flex;
     flex-direction: row;
     gap: 1rem;
+    max-width: 1114px;
   }
   main {
     padding: 0;
