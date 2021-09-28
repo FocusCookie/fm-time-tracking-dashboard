@@ -1,4 +1,4 @@
-fetch("/components/activity/activity.component.html")
+fetch("./components/activity/activity.component.html")
   .then((stream) => stream.text())
   .then((text) => define(text));
 

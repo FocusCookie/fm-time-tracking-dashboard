@@ -1,5 +1,5 @@
-@import "/css/root.css";
-@import "/css/helpers.css";
+@import "./css/root.css";
+@import "./css/helpers.css";
 
 * {
   margin: 0;

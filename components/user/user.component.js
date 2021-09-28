@@ -1,4 +1,4 @@
-fetch("/components/user/user.component.html")
+fetch("./components/user/user.component.html")
   .then((stream) => stream.text())
   .then((text) => define(text));
 
