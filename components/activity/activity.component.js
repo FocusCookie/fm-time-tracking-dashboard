@@ -11,7 +11,7 @@ function updateTimeFrames(dom) {
   const selected = dom.selected;
   const timeframes = dom.timeframes;
   const lastText = {
-    daily: "Last Day - ",
+    daily: "Yesterday - ",
     weekly: "Last Week - ",
     monthly: "Last Month - ",
   };

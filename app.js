@@ -28,6 +28,10 @@ readJsonFile("./data.json")
   .catch((err) => console.log(err));
 
 user.addEventListener("button", (e) => {
-  user.setAttribute("active", e.detail);
-  console.log("LOAD DATASET FOR - ", e.detail);
+  const timeframe = e.detail;
+  user.setAttribute("active", timeframe);
+
+  for (let activity in activityElements) {
+    activityElements[activity].selected = timeframe;
+  }
 });

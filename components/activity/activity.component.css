@@ -64,7 +64,7 @@
 
 @media only screen and (min-width: 600px) {
   .card {
-    max-width: 16rem;
+    width: 16rem;
   }
   .card-content {
     grid-auto-columns: 50%;
