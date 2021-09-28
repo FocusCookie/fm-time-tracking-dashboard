@@ -1,5 +1,5 @@
-@import "./css/root.css";
-@import "./css/helpers.css";
+@import "./../../css/root.css";
+@import "./../../css/helpers.css";
 
 * {
   margin: 0;
@@ -12,7 +12,7 @@
 .card {
   padding-top: 2.375rem;
   background-color: var(--color-work);
-  background-image: url("../../images/icon-work.svg");
+  background-image: url("././../../images/icon-work.svg");
   background-repeat: no-repeat;
   background-position: top -0.7rem right 1rem;
   border-radius: var(--radius);
@@ -36,7 +36,7 @@
   grid-area: submenue;
   justify-self: flex-end;
   align-self: center;
-  background-image: url("../../images/icon-ellipsis.svg");
+  background-image: url("./../../images/icon-ellipsis.svg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
